@@ -4,39 +4,177 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Baking with the Gemini API</title>
+  <title>Rumah Kos Aisyah</title>
+  <link rel="stylesheet" href="/style.css" />
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Owl Carousel JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 </head>
 
 <body>
+  <header>
+    <div class="container">
+        <a href="#home" class="logo">Rumah Kos Aisyah</a>
+        <nav class="nav-menu">
+          <a href="#home" data-lang-id="Home" data-lang-en="Home">Home</a>
+          <a href="#room-gallery" data-lang-id="Galeri Kamar" data-lang-en="Gallery">Pages</a>
+          <a href="#type-room" data-lang-id="Tipe Kamar" data-lang-en="Room Types">Pages</a>
+          <a href="#shared-facilities" data-lang-id="Fasilitas" data-lang-en="Facilities">About</a>
+          <a href="#customer-service" data-lang-id="Bantuan" data-lang-en="Help">Contact</a>
+          <a href="https://api.whatsapp.com/send?phone=6287810101212"
+            target="_blank"
+            class="button-primary"
+            data-lang-id="Pesan Sekarang"
+            data-lang-en="Book Now"
+            data-wa-en="Halo, saya ingin menanyakan ketersediaan kamar di Rumah Kos Aisyah."
+            data-wa-id="Hello, I would like to ask about the availability of rooms at Rumah Kos Aisyah.">
+            Book Now
+          </a>
+          <button id="lang-toggle" class="language-toggle">EN</button>
+        </nav>
+        <button class="nav-toggle" aria-label="toggle navigation">
+          <span class="hamburger"></span>
+        </button>
+    </div>
+  </header>
+
   <main>
-    <h1>Baking with the Gemini API</h1>
-    <form>
-      <div class="image-picker">
-        <label class="image-choice">
-          <input type="radio" checked name="chosen-image" value="/baked_goods_1.jpg">
-          <img src="/baked_goods_1.jpg">
-        </label>
-        <label class="image-choice">
-          <input type="radio" name="chosen-image" value="/baked_goods_2.jpg">
-          <img src="/baked_goods_2.jpg">
-        </label>
-        <label class="image-choice">
-          <input type="radio" name="chosen-image" value="/baked_goods_3.jpg">
-          <img src="/baked_goods_3.jpg">
-        </label>
+    <section id="home" class="hero dark-section">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h1 data-lang-id="Selamat Datang di Kos Aisyah" data-lang-en="Welcome to Aisyah Boarding House">Selamat Datang di Kos Aisyah</h1>
+          <p data-lang-id="Hunian nyaman dan strategis di Jakarta Selatan, dengan pilihan kamar lengkap dan fasilitas bersama." data-lang-en="A comfortable and strategic residence in South Jakarta, with a complete choice of rooms and shared facilities.">Hunian nyaman dan strategis di Jakarta Selatan, dengan pilihan kamar lengkap dan fasilitas bersama.</p>
+          <a href="#customer-service" class="button-secondary" data-lang-id="Cek Kamar Sekarang" data-lang-en="Check Rooms Now">Cek Kamar Sekarang</a>
+        </div>
+        <div class="hero-image">
+          <img src="/public/depan-kos.jpg" alt="Cozy room with modern interior">
+        </div>
       </div>
-      <div class="prompt-box">
-        <label>
-          <input name="prompt" placeholder="Enter instructions here" type="text"
-            value="Provide an example recipe for the baked goods in the image">
-        </label>
-        <button type="submit">Go</button>
+    </section>
+
+    <section id="room-gallery" class="gallery light-bg">
+      <div class="container">
+        <div class="gallery-text">
+          <h2 class="section-title" data-lang-id="Galeri Kamar" data-lang-en="Room Gallery">Galeri Kamar</h2>
+          <p data-lang-id="Lihat detail kamar" data-lang-en="View Room Details">Lihat detail kamar</p>
+        </div>
+    
+        <div class="img-gallery owl-carousel owl-theme">
+          <img src="/public/kamar1.jpg" alt="Room 1">
+          <img src="/public/kamar2.jpg" alt="Room 2">
+          <img src="/public/kamar3.jpg" alt="Room 3">
+          <img src="/public/kamar4.jpg" alt="Room 4">
+        </div>
       </div>
-    </form>
-    <p class="output">(Results will appear here)</p>
+    </section>
+
+    <section id="type-room" class="services">
+            <div class="container">
+                <div class="services-text">
+                    <h2 data-lang-id="Tipe Kamar" data-lang-en="Room Type">Tipe Kamar</h2>
+                    <p data-lang-id="Kami menyediakan pilihan kamar sesuai kebutuhanmu:" data-lang-en="We provide a choice of rooms according to your needs:">Kami menyediakan pilihan kamar sesuai kebutuhanmu:</p>
+                </div>
+                <div class="tabs-container">
+                    <div class="tabs-menu">
+                        <button class="tab-button active" data-tab="executive" data-lang-id="Tipe Executive" data-lang-en="Executive Type">Tipe Executive</button>
+                        <button class="tab-button" data-tab="vvip" data-lang-id="Tipe VVIP" data-lang-en="VVIP Type">Tipe VVIP</button>
+                        <button class="tab-button" data-tab="balcony" data-lang-id="Tipe Balkon" data-lang-en="Balcony Type">Tipe Balcony</button>
+                    </div>
+                    <div id="executive" class="tab-content active">
+                        <h3 data-lang-id="Tipe Executive" data-lang-en="Executive Type">Tipe Executive</h3>
+                        <p data-lang-id="Kamar ukuran 3 x 4 m, fully furnished dengan kamar mandi dalam. Nyaman untuk hingga 3 orang dengan fasilitas lengkap." data-lang-en="Room size 3 x 4 m, fully furnished with en-suite bathroom. Comfortable for up to 3 people with complete facilities.">Kamar ukuran 3 x 4 m, fully furnished dengan kamar mandi dalam. Nyaman untuk hingga 3 orang dengan fasilitas lengkap.</p>
+                        <ul>
+                          <li data-lang-id="Ukuran: 3 x 4 m (tidak termasuk listrik)" data-lang-en="Size: 3 x 4 m (excluding electricity)"><strong>Ukuran:</strong> 3 x 4 m (tidak termasuk listrik)</li>
+                          <li data-lang-id="Kamar mandi: kloset duduk, ember mandi, shower" data-lang-en="Bathroom: sitting toilet, bath bucket, shower"><strong>Kamar mandi:</strong> kloset duduk, ember mandi, shower</li>
+                          <li data-lang-id="Kamar tidur: AC, kasur, meja, lemari baju, ventilasi" data-lang-en="Bedroom: AC, mattress, desk, wardrobe, ventilation"><strong>Kamar tidur:</strong> AC, kasur, meja, lemari baju, ventilasi</li>
+                          <li data-lang-id="Kapasitas: maks. 3 orang/kamar (tambah Rp400.000/orang)" data-lang-en="Capacity: max. 3 people/room (add IDR 400,000/person)"><strong>Kapasitas:</strong> maks. 3 orang/kamar (tambah Rp400.000/orang)</li>
+                          <li data-lang-id="Deposit: Rp500.000 (dikembalikan bila tidak ada kerusakan)" data-lang-en="Deposit: IDR 500,000 (refundable if there is no damage)"><strong>Deposit:</strong> Rp500.000 (dikembalikan bila tidak ada kerusakan)</li>
+                        </ul>
+                        <p data-lang-id="Fasilitas Tambahan: Full furnish, kamar mandi dalam, AC, dispenser air minum, dapur bersama" data-lang-en="Additional Facilities: Fully furnished, en-suite bathroom, AC, water dispenser, shared kitchen"><strong>Fasilitas Tambahan:</strong> Full furnish, kamar mandi dalam, AC, dispenser air minum, dapur bersama</p>
+                    </div>
+                    <div id="vvip" class="tab-content">
+                        <h3 data-lang-id="Tipe VVIP" data-lang-en="VVIP Type">Tipe VVIP</h3>
+                        <p data-lang-id="Kamar luas 5 x 3 m dengan kamar mandi dalam dan water heater. Didesain untuk kenyamanan maksimal hingga 3 orang." data-lang-en="Spacious 5 x 3 m room with en-suite bathroom and water heater. Designed for maximum comfort for up to 3 people.">Kamar luas 5 x 3 m dengan kamar mandi dalam dan water heater. Didesain untuk kenyamanan maksimal hingga 3 orang.</p>
+                        <ul>
+                          <li data-lang-id="Ukuran: 5 x 3 m (tidak termasuk listrik)" data-lang-en="Size: 5 x 3 m (excluding electricity)"><strong>Ukuran:</strong> 5 x 3 m (tidak termasuk listrik)</li>
+                          <li data-lang-id="Kamar mandi: kloset duduk, shower, air panas" data-lang-en="Bathroom: sitting toilet, shower, hot water"><strong>Kamar mandi:</strong> kloset duduk, shower, air panas</li>
+                          <li data-lang-id="Kamar tidur: AC, kasur, meja, lemari baju" data-lang-en="Bedroom: AC, mattress, desk, wardrobe"><strong>Kamar tidur:</strong> AC, kasur, meja, lemari baju</li>
+                          <li data-lang-id="Kapasitas: maks. 3 orang/kamar (tambah Rp400.000/orang)" data-lang-en="Capacity: max. 3 people/room (add IDR 400,000/person)"><strong>Kapasitas:</strong> maks. 3 orang/kamar (tambah Rp400.000/orang)</li>
+                          <li data-lang-id="Deposit: Rp500.000 (dikembalikan bila tidak ada kerusakan)" data-lang-en="Deposit: IDR 500,000 (refundable if there is no damage)"><strong>Deposit:</strong> Rp500.000 (dikembalikan bila tidak ada kerusakan)</li>
+                        </ul>
+                        <p data-lang-id="Fasilitas Tambahan: Full furnish, kamar mandi dalam, AC, water heater, dispenser air minum, dapur bersama" data-lang-en="Additional Facilities: Fully furnished, en-suite bathroom, AC, water heater, water dispenser, shared kitchen"><strong>Fasilitas Tambahan:</strong> Full furnish, kamar mandi dalam, AC, water heater, dispenser air minum, dapur bersama</p>
+                    </div>
+                    <div id="balcony" class="tab-content">
+                        <h3 data-lang-id="Tipe Balkon" data-lang-en="Balcony Type">Tipe Balkon</h3>
+                        <p data-lang-id="Kamar berukuran 3.5 x 3 m dengan balkon pribadi, memberikan kenyamanan ekstra dan suasana lebih segar." data-lang-en="A 3.5 x 3 m room with a private balcony, providing extra comfort and a fresher atmosphere.">Kamar berukuran 3.5 x 3 m dengan balkon pribadi, memberikan kenyamanan ekstra dan suasana lebih segar.</p>
+                        <ul>
+                          <li data-lang-id="Ukuran: 3.5 x 3 m (tidak termasuk listrik)" data-lang-en="Size: 3.5 x 3 m (excluding electricity)"><strong>Ukuran:</strong> 3.5 x 3 m (tidak termasuk listrik)</li>
+                          <li data-lang-id="Kamar mandi: kloset duduk, shower" data-lang-en="Bathroom: sitting toilet, shower"><strong>Kamar mandi:</strong> kloset duduk, shower</li>
+                          <li data-lang-id="Kamar tidur: AC, kasur, meja, lemari baju, balkon pribadi" data-lang-en="Bedroom: AC, mattress, desk, wardrobe, private balcony"><strong>Kamar tidur:</strong> AC, kasur, meja, lemari baju, balkon pribadi</li>
+                          <li data-lang-id="Kapasitas: maks. 3 orang/kamar (tambah Rp400.000/orang)" data-lang-en="Capacity: max. 3 people/room (add IDR 400,000/person)"><strong>Kapasitas:</strong> maks. 3 orang/kamar (tambah Rp400.000/orang)</li>
+                          <li data-lang-id="Deposit: Rp500.000 (dikembalikan bila tidak ada kerusakan)" data-lang-en="Deposit: IDR 500,000 (refundable if there is no damage)"><strong>Deposit:</strong> Rp500.000 (dikembalikan bila tidak ada kerusakan)</li>
+                        </ul>
+                        <p data-lang-id="Fasilitas Tambahan: Full furnish, kamar mandi dalam, AC, water heater, balkon pribadi, dispenser air minum, dapur bersama" data-lang-en="Additional Facilities: Fully furnished, en-suite bathroom, AC, water heater, private balcony, water dispenser, shared kitchen"><strong>Fasilitas Tambahan:</strong> Full furnish, kamar mandi dalam, AC, water heater, balkon pribadi, dispenser air minum, dapur bersama</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="shared-facilities" class="dark-section">
+            <div class="container">
+                <h2 class="section-title" data-lang-id="Fasilitas Bersama" data-lang-en="Shared Facilities">Fasilitas Bersama</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                      <h3 data-lang-id="Lift & Tangga" data-lang-en="Elevator & Stairs">Lift & Tangga</h3>
+                      <p data-lang-id="Mudah menjangkau setiap lantai dengan pilihan lift atau tangga yang tersedia." data-lang-en="Easily reach every floor with the choice of elevator or stairs available.">Mudah menjangkau setiap lantai dengan pilihan lift atau tangga yang tersedia.</p>
+                    </div>
+                    <div class="service-card">
+                      <h3 data-lang-id="Parkiran Motor" data-lang-en="Motorcycle Parking">Parkiran Motor</h3>
+                      <p data-lang-id="Area parkir yang aman dan cukup luas untuk penghuni yang menggunakan kendaraan roda dua." data-lang-en="A safe and spacious parking area for residents who use two-wheeled vehicles.">Area parkir yang aman dan cukup luas untuk penghuni yang menggunakan kendaraan roda dua.</p>
+                    </div>
+                    <div class="service-card">
+                      <h3 data-lang-id="Dispenser Air Minum" data-lang-en="Water Dispenser">Dispenser Air Minum</h3>
+                      <p data-lang-id="Dispenser air minum tersedia di area bersama, memudahkan penghuni untuk selalu mendapatkan air minum." data-lang-en="A water dispenser is available in the common area, making it easy for residents to always get drinking water.">Dispenser air minum tersedia di area bersama, memudahkan penghuni untuk selalu mendapatkan air minum.</p>
+                    </div>
+                    <div class="service-card">
+                      <h3 data-lang-id="AC" data-lang-en="AC">AC</h3>
+                      <p data-lang-id="Pendingin ruangan tersedia di setiap kamar untuk memberikan kenyamanan maksimal." data-lang-en="Air conditioning is available in every room to provide maximum comfort.">Pendingin ruangan tersedia di setiap kamar untuk memberikan kenyamanan maksimal.</p>
+                    </div>
+                    <div class="service-card">
+                      <h3 data-lang-id="Dapur Bersama" data-lang-en="Shared Kitchen">Dapur Bersama</h3>
+                      <p data-lang-id="Fasilitas dapur lengkap yang bisa digunakan bersama untuk memasak atau menyiapkan makanan ringan." data-lang-en="A fully equipped kitchen facility that can be used together for cooking or preparing light meals.">Fasilitas dapur lengkap yang bisa digunakan bersama untuk memasak atau menyiapkan makanan ringan.</p>
+                    </div>
+                    <div class="service-card">
+                      <h3 data-lang-id="Penjaga Kos 24/7" data-lang-en="24/7 Boarding House Guard">Penjaga Kos 24/7</h3>
+                      <p data-lang-id="Keamanan terjamin dengan penjaga kos yang siap siaga selama 24 jam penuh." data-lang-en="Security is guaranteed with a boarding house guard who is on standby 24 hours a day.">Keamanan terjamin dengan penjaga kos yang siap siaga selama 24 jam penuh.</p>
+                    </div>
+                </div>
+            </div>
+      </section>
+
+      <section id="customer-service">
+        <div class="container">
+          <div class="chat-container">
+            <h2 class="h2-cs" data-lang-id="Layanan Pelanggan" data-lang-en="Customer Service">Customer Service</h2>
+            <div class="chat-history"></div>
+            <form>
+              <input name="prompt" placeholder="Type a message..." type="text" />
+              <button type="submit" data-lang-id="Kirim" data-lang-en="Send">Send</button>
+            </form>
+            <small data-lang-id="⚡ Didukung oleh Gemini AI" data-lang-en="⚡ Powered by Gemini AI" class="powered-by">⚡ Powered by Gemini AI</small>
+          </div>
+        </div>
+      </section>
+
   </main>
 
-  <script type="module" src="/main.js"></script>
+  <script type="module" src="main.js"></script>
 </body>
 
 </html>

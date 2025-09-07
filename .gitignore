@@ -7,7 +7,6 @@
 .pnp.js
 
 # Build output
-/dist
 /build
 /.vite
 

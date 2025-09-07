@@ -8,12 +8,19 @@
     "build": "vite build",
     "preview": "vite preview"
   },
+
+  
   "dependencies": {
-    "@google/generative-ai": "latest",
+    "@google/generative-ai": "^0.24.1",
     "base64-js": "^1.5.1",
     "markdown-it": "^13.0.2"
   },
   "devDependencies": {
     "vite": "^6.3.5"
-  }
+  },
+  "main": "main.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

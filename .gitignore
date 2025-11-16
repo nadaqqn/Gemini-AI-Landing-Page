@@ -9,6 +9,8 @@
 # Build output
 /build
 /.vite
+dist/
+
 
 # IDE & system files
 .vscode

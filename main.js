@@ -131,7 +131,7 @@ let chatHistory = document.querySelector('.chat-history');
 // Initialize the Google AI model
 const genAI = new GoogleGenerativeAI(API_KEY);
 const model = genAI.getGenerativeModel({
-  model: "gemini-1.5-flash-latest",
+  model: "gemini-2.0-flash-001",
   safetySettings: [
     {
       category: HarmCategory.HARM_CATEGORY_HARASSMENT,

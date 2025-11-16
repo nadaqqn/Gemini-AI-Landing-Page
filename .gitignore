@@ -10,6 +10,7 @@
 /build
 /.vite
 dist/
+.env
 
 
 # IDE & system files

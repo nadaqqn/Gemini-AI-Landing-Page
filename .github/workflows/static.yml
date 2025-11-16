@@ -30,13 +30,15 @@ jobs:
         run: npm ci
 
       - name: Build project
+        # Inject Google API Key dari GitHub Secrets
         run: npm run build
+        env:
+          VITE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
 
-      # FIX: gunakan upload-pages-artifact (WAJIB)
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist   # sesuaikan dengan folder hasil build
+          path: ./dist
 
   deploy:
     runs-on: ubuntu-latest
